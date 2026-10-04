@@ -8,15 +8,27 @@
     <style>
         .box {
             background-color: red;
+            padding: 10px;
+
 
         }
 
         .container {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 33% 33% 33%;
             grid-auto-rows: minmax(150px, auto);
             column-gap: 1px;
             row-gap: 1px;
+        }
+
+        .item1 {
+
+            grid-column-start: span 2;
+        }
+
+        .item2 {
+
+            grid-column-start: span 3;
         }
     </style>
 </head>
@@ -24,11 +36,12 @@
 <body>
 
     <div class="container">
-        <div class="box item1">eins</div>
-        <div class="box item2">eins</div>
-        <div class="box item3">eins</div>
-        <div class="box item4">eins</div>
-        <div class="box item5">eins</div>
+        <div class="box item1">one</div>
+        <div class="box item2">two</div>
+        <div class="box item3">three</div>
+        <div class="box item4">four</div>
+        <div class="box item5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum voluptate at fugiat id
+            mollitia earum, odio, ducimus quidem ut labore quos adipisci, numquam voluptatem dignissimos!</div>
 
 
 
