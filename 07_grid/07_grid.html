@@ -5,30 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
         .box {
             background-color: red;
-            padding: 10px;
-
-
+            padding: 12px;
         }
 
         .container {
             display: grid;
-            grid-template-columns: 33% 33% 33%;
-            grid-auto-rows: minmax(150px, auto);
-            column-gap: 1px;
-            row-gap: 1px;
+            grid-template-columns: 39% 60%;
+            grid-template-rows: 100px 150px;
+            grid-auto-rows: minmax(100px, auto);
+            gap: 8px;
         }
 
         .item1 {
-
             grid-column-start: span 2;
         }
 
         .item2 {
+            grid-row-start: span 2;
+            background-color: red;
+        }
 
-            grid-column-start: span 3;
+        .item3 {
+            background-color: red;
+        }
+
+        .item4 {
+            grid-column-start: span 2;
+            background-color: red;
         }
     </style>
 </head>
@@ -40,14 +47,11 @@
         <div class="box item2">two</div>
         <div class="box item3">three</div>
         <div class="box item4">four</div>
-        <div class="box item5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum voluptate at fugiat id
-            mollitia earum, odio, ducimus quidem ut labore quos adipisci, numquam voluptatem dignissimos!</div>
-
-
-
-
-
-
+        <div class="box item5">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Cum voluptate at fugiat id mollitia earum, odio,
+            ducimus quidem ut labore quos adipisci, numquam voluptatem dignissimos!
+        </div>
     </div>
 
 </body>
