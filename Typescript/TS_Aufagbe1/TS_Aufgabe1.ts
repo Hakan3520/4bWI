@@ -44,7 +44,23 @@ function printCars(cars: Car[]): void {
     });
 }
 
+
+function getExpensiveCars(cars: Car[], minPrice: number): Car[] {
+    const expensiveCars: Car[] = [];
+
+    cars.forEach((car) => {
+        if (car.price > minPrice) {
+            expensiveCars.push(car);
+        }
+    });
+
+    return expensiveCars;
+}
+
 console.log("Gesamtpreis:", getTotalPrice(cars));
 
 console.log("Alle Autos:");
 printCars(cars);
+
+console.log("Autos über 90000€:");
+printCars(getExpensiveCars(cars, 90000));
