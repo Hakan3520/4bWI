@@ -23,18 +23,6 @@ const cars: Car[] = [
         model: "C63 AMG",
         price: 95000,
         year: 2022
-    },
-    {
-        brand: "Volkswagen",
-        model: "Golf 8",
-        price: 35000,
-        year: 2023
-    },
-    {
-        brand: "Porsche",
-        model: "911",
-        price: 150000,
-        year: 2024
     }
 ];
 
@@ -48,4 +36,15 @@ function getTotalPrice(cars: Car[]): number {
     return totalPrice;
 }
 
+function printCars(cars: Car[]): void {
+    cars.forEach((car) => {
+        console.log(
+            `${car.brand} ${car.model} - ${car.price}€ - Baujahr: ${car.year}`
+        );
+    });
+}
+
 console.log("Gesamtpreis:", getTotalPrice(cars));
+
+console.log("Alle Autos:");
+printCars(cars);
